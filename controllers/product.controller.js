@@ -41,7 +41,3 @@ exports.product_delete = function (req, res) {
         res.send('Deleted successfully!');
     })
 };
-
-exports.product_all = function( req, res){
-   
-}
