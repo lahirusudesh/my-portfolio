@@ -13,10 +13,9 @@ const mongoDB = process.env.MONGODB_URI || dbConfig.url
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 mongoose.connect(mongoDB, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 }).then(() => {
     console.log("Successfully connected to the database");    
 }).catch(err => {
