@@ -34,5 +34,9 @@ app.listen(port, () => {
     console.log('Server is up and running on port numner ' + port);
 });
 
+app.get('/', (req, res) => {
+    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
+});
+
 
 
